@@ -14,11 +14,11 @@ module.exports = {
         embed.setThumbnail(client.user.displayAvatarURL())
         const commands = client.commands.filter(x => x.showHelp !== false);
 
-        embed.setDescription('To access this music bot: [Umut Bayraktar Music Bot](https://youtube.com/UmutBayraktarYT), need more help You can get help by joining our Discord Community.\nHow about creating your own music world?') ;
+        embed.setDescription('Bot commands help') ;
         embed.addField(`Available - ${commands.size} Command Available`, commands.map(x => `\`${x.name}${x.aliases[0] ? ` (${x.aliases[0]})\`` : '\`'}`).join(' | '));
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL:message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'Soulless ❤️', iconURL:message.author.avatarURL({ dynamic: true }) });
         message.channel.send({ embeds: [embed] });
     },
 };
