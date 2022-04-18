@@ -29,7 +29,7 @@ module.exports = {
         .setThumbnail(client.user.displayAvatarURL())
         .setTimestamp()
         .setDescription(`${progress} (**${timestamp.progress}**%)`)
-        .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL: message.author.displayAvatarURL({ dynamic: true }) });
+        .setFooter({ text: 'Soulless ❤️', iconURL: message.author.displayAvatarURL({ dynamic: true }) });
         message.channel.send({ embeds: [embed], components: [row] });
     },
 };
