@@ -1,6 +1,6 @@
 module.exports = {
-        px: '!',
-        playing: 'something',
+        px: '-',
+        playing: '-help | vk.com/trentyn',
 
     opt: {
         DJ: {
