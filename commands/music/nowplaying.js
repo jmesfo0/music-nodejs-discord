@@ -27,7 +27,7 @@ const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track
         embed.setDescription(`Audio **%${queue.volume}**\nDuration **${trackDuration}**\nURL: ${track.url}\nLoop Mode **${methods[queue.repeatMode]}**\n${track. requestedBy}`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Soulless ❤️ ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'jmes ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
 
         const saveButton = new MessageButton();
 
