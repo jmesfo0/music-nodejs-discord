@@ -18,7 +18,7 @@ module.exports = {
         embed.addField(`Available - ${commands.size} Command Available`, commands.map(x => `\`${x.name}${x.aliases[0] ? ` (${x.aliases[0]})\`` : '\`'}`).join(' | '));
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Soulless ❤️', iconURL:message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'jmes ❤️', iconURL:message.author.avatarURL({ dynamic: true }) });
         message.channel.send({ embeds: [embed] });
     },
 };
