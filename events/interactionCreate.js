@@ -17,7 +17,7 @@ module.exports = (client, int) => {
           .addField(`Saved Server`, `\`${int.guild.name}\``)
           .addField(`Requested By`, `${queue.current.requestedBy}`)
           .setTimestamp()
-          .setFooter({ text: 'Soulless ❤️', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
+          .setFooter({ text: 'jmes ❤️', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
           int.member.send({ embeds: [embed] }).then(() => {
                 return int.reply({ content: `I sent you the name of the music in a private message ✅`, ephemeral: true, components: [] });
             }).catch(error => {
@@ -39,7 +39,7 @@ module.exports = (client, int) => {
             .setThumbnail(client.user.displayAvatarURL())
             .setTimestamp()
             .setDescription(`${progress} (**${timestamp.progress}**%)`)
-            .setFooter({ text: 'Soulless ❤️', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
+            .setFooter({ text: 'jmes ❤️', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
             int.message.edit({ embeds: [embed] });
             int.reply({ content: `**✅ Success:** Time data updated. `, ephemeral: true});
         }
