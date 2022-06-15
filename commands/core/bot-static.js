@@ -20,7 +20,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL())
                 .setTitle(client.user.username)
-                .setFooter({ text: 'Soulless ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                .setFooter({ text: 'jmes ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
                 .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
@@ -41,7 +41,7 @@ module.exports = {
                         .setTimestamp()
                         .setThumbnail(client.user.displayAvatarURL())
                         .setTitle(client.user.username)
-                        .setFooter({ text: 'Soulless ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                        .setFooter({ text: 'jmes ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
                         .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
@@ -80,7 +80,7 @@ module.exports = {
                         .setTimestamp()
                         .setThumbnail(client.user.displayAvatarURL())
                         .setTitle(client.user.username + " Command Time Ended")
-                        .setFooter({ text: 'Soulless ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                        .setFooter({ text: 'jmes ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
                         .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
