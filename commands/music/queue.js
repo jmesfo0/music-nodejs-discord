@@ -29,7 +29,7 @@ module.exports = {
         embed.setDescription(`Currently Playing: \`${queue.current.title}\`\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs }`);
 
         embed.setTimestamp();
-        embed.setFooter({text: 'Soulless ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({text: 'jmes ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
 
         message.channel.send({ embeds: [embed] });
     },
