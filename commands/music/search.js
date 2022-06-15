@@ -29,15 +29,15 @@ if (!args[0]) return message.channel.send({ content: `${message.author}, Please 
 
         const maxTracks = res.tracks.slice(0, 10);
 
-        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nChoose a song from **1** to **${maxTracks.length}** write send or write **cancel** and cancel selection.⬇️`);
+        embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nChoose a song from **1** to **${maxTracks.length}** type in the **#** or type **cancel** to cancel selection.⬇️`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'Soulless ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'jmes ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
 
         message.channel.send({ embeds: [embed] });
 
         const collector = message.channel.createMessageCollector({
-            time: 15000,
+            time: 20000,
             errors: ['time'],
             filter: m => m.author.id === message.author.id
         });
