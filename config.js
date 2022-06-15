@@ -1,6 +1,6 @@
 module.exports = {
         px: '-',
-        playing: '-help | vk.com/trentyn',
+        playing: '-help | nodejs musicbot for discord',
 
     opt: {
         DJ: {
