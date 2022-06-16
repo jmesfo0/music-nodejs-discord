@@ -1,6 +1,10 @@
 module.exports = {
         px: '-',
-        listening: '-play',
+        Presence: {
+                status: "online", // You can show online, idle, and dnd
+                name: ".play", // The message shown
+                type: "LISTENING", // PLAYING, WATCHING, LISTENING, STREAMING
+        },
 
     opt: {
         DJ: {
