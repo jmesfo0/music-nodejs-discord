@@ -1,8 +1,4 @@
-function setPresenceLoop () {
-  setInterval(client.user.setPresence(client.config.presence), 5000)
-}
-
 module.exports = async (client) => {
-  setPresenceLoop()
+  setInterval(client.user.setPresence(client.config.presence), 5000);
   console.log("Successfully Logged in as " + client.user.name);
 };
