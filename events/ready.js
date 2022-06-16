@@ -1,6 +1,6 @@
 module.exports = async (client) => {
   (client.Ready = true),
-    client.user.setPresence({
+    client.user.setActivity({
     status: client.config.Presence.status, // You can show online, idle, and dnd
       activity: {
         name: client.config.Presence.name,
