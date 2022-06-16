@@ -1,11 +1,12 @@
 module.exports = async (client) => {
   (client.Ready = true),
-    client.user.setActivity({
-    status: client.config.Presence.status, // You can show online, idle, and dnd
-      activity: {
-        name: client.config.Presence.name,
-        type: client.config.Presence.type,
-      },
-});
+  client.user.setStatus('available')
+    client.user.setPresence({
+        activity: {
+            name: client.config.Presence.name,
+            type: client.config.Presence.type,
+        }
+    });
+  
     console.log(`${client.user.username} Login!`);
 };
