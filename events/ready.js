@@ -1,12 +1,5 @@
 module.exports = async (client) => {
-  (client.Ready = true),
-  client.user.setStatus('available')
-    client.user.setPresence({
-        activity: {
-            name: client.config.Presence.name,
-            type: client.config.Presence.type,
-        }
-    });
-  
-    console.log(`${client.user.username} Login!`);
+  client.manager.init(client.user.id);
+  client.user.setPresence(client.config.presence);
+  client.log("Successfully Logged in as " + client.user.tag);
 };
