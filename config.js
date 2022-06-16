@@ -1,6 +1,6 @@
 module.exports = {
         px: '-',
-        playing: '-play',
+        listening: '-play',
 
     opt: {
         DJ: {
