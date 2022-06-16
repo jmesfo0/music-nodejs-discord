@@ -1,6 +1,6 @@
 module.exports = {
         px: '-',
-        playing: '-help | nodejs musicbot for discord',
+        playing: '-play',
 
     opt: {
         DJ: {
