@@ -65,7 +65,7 @@ console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bo
 } else {
 console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
 }
-
+client.on('ready', () => {
     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
     const activities_list = [
     "-play", 
@@ -77,3 +77,4 @@ console.log("Please Write Your Bot Token Opposite The Token In The config.js Fil
 setInterval(() => {
         client.user.setActivity(activities_list[index], {type: 'LISTENING'});
     }, 1000);
+});
