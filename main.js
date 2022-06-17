@@ -56,7 +56,19 @@ player.on('queueEnd', (queue) => {
     queue.metadata.send({ content: 'All play queue finished, I think you can listen to some more music. ✅' });
 });
 
-
+ const activities_list = [
+        "with the &help command.", 
+        "with the developers console",
+        "with some code", 
+        "with JavaScript"
+        ]; // creates an arraylist containing phrases you want your bot to switch through.
+    
+    client.on('ready', () => {
+        setInterval(() => {
+            const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+            client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+        }, 10000); // Runs this every 10 seconds.
+    });
 
 if(process.env.BOT_TOKEN){
 client.login(process.env.BOT_TOKEN).catch(e => {
@@ -65,16 +77,4 @@ console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bo
 } else {
 console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
 }
-client.on('ready', () => {
-    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-    const activities_list = [
-    "-play", 
-    "tires screaching", 
-    "people argueing", 
-    "something", 
-    "your thoughts", 
-    ];
-setInterval(() => {
-        client.user.setActivity(activities_list[index], {type: 'LISTENING'});
-    }, 1000);
-});
+
