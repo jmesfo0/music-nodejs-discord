@@ -18,13 +18,33 @@ module.exports = {
             }
         }
     },
-        presence: {
+        presence1: {
     //PresenceData object | https://discord.js.org/#/docs/main/stable/typedef/PresenceData
     status: "online", // You can have online, idle, and dnd(invisible too but it make people think the bot is offline)
     activities: [
       {
         name: "-play", //Status Text
         type: "LISTENING", // PLAYING, WATCHING, LISTENING, STREAMING
+      },
+    ],
+  },
+        presence2: {
+    //PresenceData object | https://discord.js.org/#/docs/main/stable/typedef/PresenceData
+    status: "online", // You can have online, idle, and dnd(invisible too but it make people think the bot is offline)
+    activities: [
+      {
+        name: "-play", //Status Text
+        type: "WATCHING", // PLAYING, WATCHING, LISTENING, STREAMING
+      },
+    ],
+  },
+        presence3: {
+    //PresenceData object | https://discord.js.org/#/docs/main/stable/typedef/PresenceData
+    status: "online", // You can have online, idle, and dnd(invisible too but it make people think the bot is offline)
+    activities: [
+      {
+        name: "-play", //Status Text
+        type: "PLAYING", // PLAYING, WATCHING, LISTENING, STREAMING
       },
     ],
   }
