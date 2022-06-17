@@ -4,7 +4,7 @@ var item = items[Math.floor(Math.random() * items.length)];
 
 
 function myTimer() {
-  client.user.setPresence(client.config.presence(item);
+  client.user.setPresence(client.config.presence(item));
 }
 
 module.exports = async (client) => {
