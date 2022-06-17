@@ -1,15 +1,15 @@
+const activities_list = [
+    "Activitie One", 
+    "Activitie Two", 
+    "Activitie Three", 
+    ];
+
 module.exports = async (client) => {
 
-  var items = ['Yes', 'No', 'Maybe'];
-  var item = items[Math.floor(Math.random() * items.length)];
-      
-  setInterval(() => {client.user.setPresence({
-        status: "online",  // You can show online, idle... Do not disturb is dnd
-        game: {
-            name: "!help",  // The message shown
-            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
-        }
-    })}, 5000);
+setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
+        client.user.setActivity(activities_list[index], {type: 'WATCHING'});
+    }, 3000);
   
   
   console.log("Successfully Logged in as " + client.user.tag);
