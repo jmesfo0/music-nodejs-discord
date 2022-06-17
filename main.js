@@ -35,6 +35,18 @@ readdirSync('./commands/').forEach(dirs => {
 });
 
 
+const activities_list = [
+        "-help", 
+        "-play"
+        ]; // creates an arraylist containing phrases you want your bot to switch through.
+    
+client.on('ready', () => {
+        setInterval(() => {
+            const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+            client.user.setActivity(activities_list[index], {type: 'LISTENING'}); // sets bot's activities to one of the phrases in the arraylist.
+        }, 10000); // Runs this every 10 seconds.
+    });
+
 player.on('trackStart', (queue, track) => {
     if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
     queue.metadata.send({ content: `🎵 Music started playing: **${track.title}** -> Channel: **${queue.connection.channel.name}** 🎧` });
@@ -55,18 +67,6 @@ player.on('channelEmpty', (queue) => {
 player.on('queueEnd', (queue) => {
     queue.metadata.send({ content: 'All play queue finished, I think you can listen to some more music. ✅' });
 });
-
-const activities_list = [
-        "-help", 
-        "-play"
-        ]; // creates an arraylist containing phrases you want your bot to switch through.
-    
-client.on('ready', () => {
-        setInterval(() => {
-            const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-            client.user.setActivity(activities_list[index], {type: 'LISTENING'}); // sets bot's activities to one of the phrases in the arraylist.
-        }, 10000); // Runs this every 10 seconds.
-    });
 
 if(process.env.BOT_TOKEN){
 client.login(process.env.BOT_TOKEN).catch(e => {
