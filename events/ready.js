@@ -1,9 +1,9 @@
 
 module.exports = async (client) => {
     const activities_list = [
-    "Activitie One", 
-    "Activitie Two", 
-    "Activitie Three", 
+    "-play", 
+    "your mom", 
+    "your grandma", 
     ];
 setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
