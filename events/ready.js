@@ -1,7 +1,3 @@
-
-var used1 = false;
-var version = '1.0.0';
-
 module.exports = async (client) => {
   
   var items = ['Yes', 'No', 'Maybe'];
